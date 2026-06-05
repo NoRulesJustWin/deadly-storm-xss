@@ -77,8 +77,8 @@ animation: floatOverlay 6s ease-in-out infinite;}
 .passed-text{font-family:'Orbitron',monospace;font-size:clamp(1.3rem,4.5vw,3rem);font-weight:900;color:#fff;letter-spacing:.12em;opacity:0;
 animation: fadeUp 1.2s ease forwards, pulseGlow 6s 1.2s infinite;}
 
-/* تمت إضافة margin-top: 15vh هنا لإنزال الرابط */
-.links-wrap{display:flex;flex-direction:column;align-items:center;gap:.9rem;margin-top:15vh;animation:fadeUp 1.2s .6s ease forwards;opacity:0}
+/* تم تقليل margin-top لرفع الرابط للأعلى قليلا */
+.links-wrap{display:flex;flex-direction:column;align-items:center;gap:.9rem;margin-top:5vh;animation:fadeUp 1.2s .6s ease forwards;opacity:0}
 
 .discord-link{font-family:'Share Tech Mono',monospace;font-size:clamp(1.1rem,2.5vw,1.4rem);color:#666;letter-spacing:.25em;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:4px;transition:all .3s cubic-bezier(0.25, 0.8, 0.25, 1);position: relative;}
 .discord-link::before {content: ''; position: absolute; bottom: -1px; left: 0; width: 0; height: 1px; background: #fff; transition: width 0.3s ease;}
@@ -96,7 +96,6 @@ animation: fadeUp 1.2s ease forwards, pulseGlow 6s 1.2s infinite;}
 </head>
 <body>
 
-<!-- طريقة التشغيل مطابقة لكودك (بدون جافاسكريبت) -->
 <audio autoplay loop>
   <source src="https://h.top4top.io/m_3804cd9v11.mp3" type="audio/mpeg" />
 </audio>
@@ -131,6 +130,7 @@ animation: fadeUp 1.2s ease forwards, pulseGlow 6s 1.2s infinite;}
     <div class="passed-text">Passed By Dr.Simon Leviev 1337</div>
     <div class="links-wrap">
       <a class="discord-link" href="https://discord.gg/997" target="_blank">discord.gg/997</a>
+    </div>
   </div>
 </div>
 
