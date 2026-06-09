@@ -55,7 +55,8 @@ animation:flicker 5s infinite, glitchName 7s infinite steps(1)}
     50% { transform: translate(-50%,-50%) scale(1.05); filter: grayscale(80%) contrast(1.2) brightness(0.9); }
     100% { transform: translate(-50%,-50%) scale(1); filter: grayscale(100%) contrast(1.1); }
 }
-.video-wrap img{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);min-width:100%;min-height:100%;width:auto;height:auto;opacity:.5;object-fit:cover;
+/* تم استبدال img بـ video */
+.video-wrap video{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);min-width:100%;min-height:100%;width:auto;height:auto;opacity:.5;object-fit:cover;
 animation: breathingBG 15s ease-in-out infinite;}
 
 .video-wrap::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,.15) 0%,rgba(0,0,0,.88) 100%)}
@@ -77,7 +78,6 @@ animation: floatOverlay 6s ease-in-out infinite;}
 .passed-text{font-family:'Orbitron',monospace;font-size:clamp(1.3rem,4.5vw,3rem);font-weight:900;color:#fff;letter-spacing:.12em;opacity:0;
 animation: fadeUp 1.2s ease forwards, pulseGlow 6s 1.2s infinite;}
 
-/* تم تقليل margin-top لرفع الرابط للأعلى قليلا */
 .links-wrap{display:flex;flex-direction:column;align-items:center;gap:.9rem;margin-top:5vh;animation:fadeUp 1.2s .6s ease forwards;opacity:0}
 
 .discord-link{font-family:'Share Tech Mono',monospace;font-size:clamp(1.1rem,2.5vw,1.4rem);color:#666;letter-spacing:.25em;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:4px;transition:all .3s cubic-bezier(0.25, 0.8, 0.25, 1);position: relative;}
@@ -95,10 +95,6 @@ animation: fadeUp 1.2s ease forwards, pulseGlow 6s 1.2s infinite;}
 </style>
 </head>
 <body>
-
-<audio autoplay loop>
-  <source src="https://h.top4top.io/m_3804cd9v11.mp3" type="audio/mpeg" />
-</audio>
 
 <div id="page1" class="page">
   <canvas id="matrix"></canvas>
@@ -123,8 +119,9 @@ animation: fadeUp 1.2s ease forwards, pulseGlow 6s 1.2s infinite;}
 <div id="page2" class="page hidden">
   <div class="corner tl"></div><div class="corner tr"></div>
   <div class="corner bl"></div><div class="corner br"></div>
+  <!-- تم استبدال الصورة بالفيديو المطلوب -->
   <div class="video-wrap">
-    <img id="bgImage" src="https://4up4.com/uploads/file_2026-06-09_145553.mp4" alt="Background">
+    <video id="bgVideo" src="https://4up4.com/uploads/file_2026-06-09_145553.mp4" autoplay loop playsinline></video>
   </div>
   <div class="overlay2">
     <div class="passed-text">Passed By Dr.Simon Leviev 1337</div>
