@@ -40,6 +40,10 @@
     position: relative; z-index: 10;
     text-align: center; padding: 2rem;
     max-width: 900px; width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .tag-line {
@@ -55,7 +59,11 @@
     font-weight: 900; color: #fff;
     text-shadow: 0 0 15px #fff, 0 0 40px rgba(255,255,255,0.2);
     letter-spacing: 0.12em;
+    text-indent: 0.12em; /* لموازنة تباعد الأحرف وتوسيط النص بشكل مثالي في المنتصف */
+    text-align: center;
+    margin: 0 auto;
     animation: flicker 5s infinite; line-height: 1;
+    width: 100%;
   }
   @keyframes flicker {
     0%,19%,21%,23%,25%,54%,56%,100% { opacity: 1; }
@@ -69,12 +77,13 @@
   }
 
   .desc-box {
-    background: rgba(0, 0, 0, 0.75); /* زيادة عتامة الخلفية لمنع تداخل أحرف الماتريكس مع النص */
+    background: rgba(0, 0, 0, 0.75);
     border: 1px solid rgba(255,255,255,0.15);
     border-radius: 4px; padding: 1.2rem 2rem;
     margin: 1rem auto; max-width: 650px;
     text-align: left; font-size: 0.85rem;
     line-height: 1.9; direction: ltr;
+    width: 100%;
   }
   .desc-box .prompt { color: #fff; }
   .desc-box .cmd   { color: #bbb; }
@@ -184,17 +193,15 @@
   <canvas id="matrix"></canvas>
   <div class="content1">
     <div class="tag-line">[ INITIALIZING SYSTEM... ]</div>
-    <!-- هنا تم تعديل العنوان الرئيسي والتأكد من وسم div -->
+    <!-- تم إدراج الاسم داخل وسم div المخصص وتوسيطه تماماً -->
     <div class="group-name">Sucidesboyss1337</div>
     <div class="divider"></div>
     <div class="desc-box">
       <div><span class="prompt">root@dw:~$</span> <span class="cmd"> cat group_info.txt</span></div><br>
-      <!-- هنا تم تعديل اسم المجموعة داخل صندوق الأوامر -->
       <div class="out">// Group  : <span style="color:#ddd">Sucidesboyss1337</span></div>
       <div class="out">// Type   : <span style="color:#ddd">Programming &amp; Development</span></div>
       <div class="out">// Status : <span style="color:#fff">● ALIVE</span></div><br>
 
-      <!-- هنا تم تعديل موجه النظام البرمي -->
       <div><span class="prompt">System@Sucidesboyss1337~$</span> <span class="cmd typed">_</span></div>
     </div>
 
@@ -218,7 +225,6 @@
   </div>
 
   <div class="overlay2">
-    <!-- هنا تم تعديل النص في الصفحة الثانية -->
     <div class="passed-text">Passed By Sucidesboyss1337</div>
     <a class="discord-link" href="https://discord.gg/066" target="_blank">discord.gg/066</a>
   </div>
