@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr.Simon Levie</title>
+<title>DeathWish | Reaper</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
 <style>
@@ -16,18 +16,8 @@ canvas#matrix{position:fixed;inset:0;z-index:0}
 .content1{position:relative;z-index:10;text-align:center;padding:1.5rem;max-width:860px;width:100%}
 .tag-line{font-size:.7rem;color:rgba(255,255,255,.3);letter-spacing:.4em;margin-bottom:.9rem;animation:blink 1.2s step-end infinite}
 @keyframes blink{50%{opacity:0}}
-
-.group-name{font-family:'Orbitron',monospace;font-size:clamp(2.2rem,7vw,5.5rem);font-weight:900;color:#fff;text-shadow:0 0 12px #fff,0 0 35px rgba(255,255,255,.15);letter-spacing:.12em;line-height:1;white-space:nowrap;
-animation:flicker 5s infinite, glitchName 7s infinite steps(1)}
+.group-name{font-family:'Orbitron',monospace;font-size:clamp(2.2rem,7vw,5.5rem);font-weight:900;color:#fff;text-shadow:0 0 12px #fff,0 0 35px rgba(255,255,255,.15);letter-spacing:.12em;animation:flicker 5s infinite;line-height:1}
 @keyframes flicker{0%,19%,21%,23%,25%,54%,56%,100%{opacity:1}20%,24%,55%{opacity:.25}}
-@keyframes glitchName {
-    0% { transform: translate(0); text-shadow: 0 0 12px #fff; }
-    20% { transform: translate(-3px, 1px); text-shadow: -2px 0 red, 2px 0 cyan; }
-    21% { transform: translate(0); text-shadow: 0 0 12px #fff; }
-    60% { transform: translate(3px, -1px); text-shadow: -2px 0 blue, 2px 0 yellow; }
-    61% { transform: translate(0); text-shadow: 0 0 12px #fff; }
-}
-
 .divider{margin:.9rem auto;height:1px;width:55%;background:linear-gradient(90deg,transparent,#fff,transparent);box-shadow:0 0 8px #fff}
 .desc-box{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:1rem 1.6rem;margin:.8rem auto;max-width:620px;text-align:left;font-size:.82rem;line-height:1.85;direction:ltr}
 .desc-box .prompt{color:#fff}
@@ -49,43 +39,14 @@ animation:flicker 5s infinite, glitchName 7s infinite steps(1)}
 /* PAGE 2 */
 #page2{background:#000}
 .video-wrap{position:fixed;inset:0;z-index:1;overflow:hidden}
-
-@keyframes breathingBG {
-    0% { transform: translate(-50%,-50%) scale(1); filter: grayscale(100%) contrast(1.1); }
-    50% { transform: translate(-50%,-50%) scale(1.05); filter: grayscale(80%) contrast(1.2) brightness(0.9); }
-    100% { transform: translate(-50%,-50%) scale(1); filter: grayscale(100%) contrast(1.1); }
-}
-/* تم استبدال img بـ video */
-.video-wrap video{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);min-width:100%;min-height:100%;width:auto;height:auto;opacity:.5;object-fit:cover;
-animation: breathingBG 15s ease-in-out infinite;}
-
+.video-wrap video{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);min-width:100%;min-height:100%;width:auto;height:auto;filter:grayscale(100%) contrast(1.1);opacity:.5}
 .video-wrap::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,.15) 0%,rgba(0,0,0,.88) 100%)}
-
-@keyframes floatOverlay {
-    0% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(-12px); }
-    100% { transform: translateX(-50%) translateY(0); }
-}
-.overlay2{position:absolute;top:5%;left:50%;transform:translateX(-50%);width:100%;z-index:10;text-align:center;display:flex;flex-direction:column;align-items:center;gap:1rem;
-animation: floatOverlay 6s ease-in-out infinite;}
-
-@keyframes pulseGlow {
-    0%, 100% { text-shadow: 0 0 20px #fff, 0 0 40px rgba(255,255,255,.15); color: #fff; transform: skewX(0deg); }
-    50% { text-shadow: 0 0 30px #fff, 0 0 60px rgba(255,80,80,.2); color: #fdfdfd; }
-    98% { text-shadow: 0 0 20px #fff, 0 0 40px rgba(255,255,255,.15); }
-    99% { text-shadow: -3px 0 red, 3px 0 cyan; transform: skewX(2deg); }
-}
-.passed-text{font-family:'Orbitron',monospace;font-size:clamp(1.3rem,4.5vw,3rem);font-weight:900;color:#fff;letter-spacing:.12em;opacity:0;
-animation: fadeUp 1.2s ease forwards, pulseGlow 6s 1.2s infinite;}
-
-.links-wrap{display:flex;flex-direction:column;align-items:center;gap:.9rem;margin-top:5vh;animation:fadeUp 1.2s .6s ease forwards;opacity:0}
-
-.discord-link{font-family:'Share Tech Mono',monospace;font-size:clamp(1.1rem,2.5vw,1.4rem);color:#666;letter-spacing:.25em;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:4px;transition:all .3s cubic-bezier(0.25, 0.8, 0.25, 1);position: relative;}
-.discord-link::before {content: ''; position: absolute; bottom: -1px; left: 0; width: 0; height: 1px; background: #fff; transition: width 0.3s ease;}
-.discord-link:hover::before { width: 100%; }
-.discord-link:hover{color:#fff;border-color:transparent;text-shadow:0 0 12px #fff; transform: scale(1.05);}
-
-.links-divider{width:1px;height:15px;background:rgba(255,255,255,.15)}
+.overlay2{position:relative;z-index:10;text-align:center;display:flex;flex-direction:column;align-items:center;gap:1rem}
+.passed-text{font-family:'Orbitron',monospace;font-size:clamp(1.3rem,4.5vw,3rem);font-weight:900;color:#fff;letter-spacing:.12em;text-shadow:0 0 20px #fff,0 0 50px rgba(255,255,255,.15);animation:fadeUp 1.2s ease forwards;opacity:0}
+.links-wrap{display:flex;flex-direction:column;align-items:center;gap:.6rem;animation:fadeUp 1.2s .6s ease forwards;opacity:0}
+.discord-link{font-family:'Share Tech Mono',monospace;font-size:clamp(.8rem,2vw,1.05rem);color:#666;letter-spacing:.25em;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:2px;transition:all .2s}
+.discord-link:hover{color:#fff;border-color:#fff;text-shadow:0 0 8px #fff}
+.links-divider{width:1px;height:12px;background:rgba(255,255,255,.15)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 .corner{position:fixed;width:44px;height:44px;border-color:rgba(255,255,255,.25);border-style:solid;z-index:12}
 .corner.tl{top:14px;left:14px;border-width:2px 0 0 2px}
@@ -100,14 +61,14 @@ animation: fadeUp 1.2s ease forwards, pulseGlow 6s 1.2s infinite;}
   <canvas id="matrix"></canvas>
   <div class="content1">
     <div class="tag-line">[ INITIALIZING SYSTEM... ]</div>
-    <div class="group-name">Dr.Simon Levie</div>
+    <div class="group-name">DEATHWISH</div>
     <div class="divider"></div>
     <div class="desc-box">
       <div><span class="prompt">root@dw:~$</span> <span class="cmd"> cat group_info.txt</span></div><br>
-      <div class="out">// Group  : <span style="color:#ddd">Dr.Simon Levie</span></div>
+      <div class="out">// Group  : <span style="color:#ddd">DeathWish & Reaper</span></div>
       <div class="out">// Type   : <span style="color:#ddd">Programming &amp; Development</span></div>
       <div class="out">// Status : <span style="color:#fff">● ACTIVE</span></div><br>
-      <div><span class="prompt">System@Dr.Simon Levie~$</span> <span class="cmd typed">_</span></div>
+      <div><span class="prompt">System@deathwish&Reaper~$</span> <span class="cmd typed">_</span></div>
     </div>
     <div class="members-title">// ACTIVE MEMBERS //</div>
     <div class="members-grid" id="membersGrid"></div>
@@ -119,14 +80,17 @@ animation: fadeUp 1.2s ease forwards, pulseGlow 6s 1.2s infinite;}
 <div id="page2" class="page hidden">
   <div class="corner tl"></div><div class="corner tr"></div>
   <div class="corner bl"></div><div class="corner br"></div>
-  <!-- تم استبدال الصورة بالفيديو المطلوب -->
   <div class="video-wrap">
-    <video id="bgVideo" src="https://4up4.com/uploads/file_2026-06-10_005356.mp4" autoplay loop playsinline></video>
+    <video id="bgVideo" autoplay loop playsinline muted preload="auto">
+      <source src="https://i.top4top.io/m_3786w91u51.mp4" type="video/mp4">
+    </video>
   </div>
   <div class="overlay2">
-    <div class="passed-text">Passed By Dr.Simon Leviev 1337</div>
+    <div class="passed-text">Passed By DeathWish1337 & Reaper187</div>
     <div class="links-wrap">
-      <a class="discord-link" href="https://discord.gg/997" target="_blank">discord.gg/997</a>
+      <a class="discord-link" href="https://discord.gg/066" target="_blank">discord.gg/066</a>
+      <div class="links-divider"></div>
+      <a class="discord-link" href="https://discord.gg/d-h" target="_blank">discord.gg/d-h</a>
     </div>
   </div>
 </div>
@@ -160,18 +124,25 @@ function draw(ts){
 raf=requestAnimationFrame(draw);
 
 // Members
-const members=['! ABO MT3B','8bx'];
+const members=['Russman','xM3L8','Fw','LqNz','Delete','Majed','Orbital','𝙺𝚜𝚘𝟽','8bx'];
 const grid=document.getElementById('membersGrid');
 const lc=document.createElement('div');
 lc.className='member-card leader';lc.textContent='group member';
 grid.appendChild(lc);
 members.forEach(m=>{const c=document.createElement('div');c.className='member-card';c.textContent=m;grid.appendChild(c)});
 
+// Preload video
+const vid=document.getElementById('bgVideo');
+vid.load();
+
 // Transition
 setTimeout(()=>{
   cancelAnimationFrame(raf);
   document.getElementById('page1').classList.add('hidden');
   document.getElementById('page2').classList.remove('hidden');
+  vid.muted=false;
+  vid.volume=0.75;
+  vid.play().catch(()=>{vid.muted=true;vid.play()});
 },3000);
 </script>
 </body>
